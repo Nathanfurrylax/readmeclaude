@@ -1,4 +1,3 @@
-```
 * {
   box-sizing: border-box;
   margin: 0;
@@ -371,15 +370,11 @@ tr:last-child td {
     padding: 90px 20px 60px;
   }
 }
-
-```
-
 ```
 <!-- Vue d'ensemble -->
 <section id="overview">
   <h2>📌 Vue d'ensemble</h2>
   <p>Cette solution clé en main combine un **bot Discord autonome** rédigé en Node.js (discord.js v14) et un **Dashboard Web d'administration**. Il offre un contrôle total sur les messages du bot, le règlement du serveur, les sanctions automatiques et la modération sans avoir besoin de toucher une seule ligne de code.</p>
-  
   <div class="grid-2">
     <div class="card">
       <h4>⚡ Modération du Règlement</h4>
@@ -399,7 +394,6 @@ tr:last-child td {
     </div>
   </div>
 </section>
-
 <!-- Architecture -->
 <section id="architecture">
   <h2>🏗️ Architecture des Fichiers</h2>
@@ -409,9 +403,7 @@ tr:last-child td {
     <button class="copy-btn" onclick="copyCode(this)">Copier</button>
     <div class="code-block">
       <pre>mon-bot-discord/
-
 ```
-
 ├── 📁 public/            # Application Web Frontend (Dashboard)
 │   ├── 📄 index.html     # Page HTML unique du Panel
 │   └── 📄 app.js         # Logique dynamique & requêtes API
@@ -422,15 +414,11 @@ tr:last-child td {
 ├── 📄 schema.sql         # Fichier d'initialisation des tables SQLite
 ├── 📄 migrate.js        # Script de transfert depuis un ancien config.json
 └── 📄 package.json       # Dépendances du projet Node.js
-
-
-
 ```
 <!-- GitHub Pages -->
 <section id="github-pages">
   <h2>🌐 Héberger cette documentation sur GitHub Pages</h2>
   <p>Pour mettre cette page web à disposition de votre cliente gratuitement et indépendamment du serveur du bot, vous pouvez la publier sur GitHub Pages en quelques clics :</p>
-
   <div class="callout">
     <h5>💡 Instructions pour GitHub Pages :</h5>
     <p>1. Créez un dépôt public sur votre compte GitHub (ex: <span class="inline-code">bot-discord-doc</span>).<br>
@@ -440,24 +428,18 @@ tr:last-child td {
     5. Votre site sera disponible en 1 à 2 minutes à l'adresse : <span class="inline-code">https://votre-pseudo.github.io/bot-discord-doc/</span>.</p>
   </div>
 </section>
-
 <!-- Déploiement KarmaCloud -->
 <section id="deployment">
   <h2>🚀 Déploiement sur KarmaCloud (SFTP)</h2>
-  
   <h3>1. Configuration du fichier .env</h3>
   <p>Créez un fichier nommé <span class="inline-code">.env</span> à la racine de votre dossier sur le serveur :</p>
   <div class="code-wrapper">
     <button class="copy-btn" onclick="copyCode(this)">Copier</button>
     <div class="code-block">
       <pre>TOKEN=votre_token_secret_discord_ici
-
 ```
-
 PANEL_PASSWORD=mot_de_passe_choisi_pour_la_cliente
 PORT=3000
-
-
 ```
   <h3>2. Installation des paquets Node.js</h3>
   <p>Ouvrez la console KarmaCloud ou votre terminal SSH et exécutez :</p>
@@ -467,7 +449,6 @@ PORT=3000
       <pre>npm install</pre>
     </div>
   </div>
-
   <h3>3. Démarrage de l'application</h3>
   <p>Lancez le bot Discord et le serveur Web du Panel simultanément :</p>
   <div class="code-wrapper">
@@ -477,12 +458,10 @@ PORT=3000
     </div>
   </div>
 </section>
-
 <!-- Manuel Panel Web -->
 <section id="dashboard">
   <h2>💻 Manuel d'utilisation du Panel Web</h2>
   <p>La cliente peut se connecter au Dashboard en entrant l'adresse IP et le port configurés (ex: <span class="inline-code">http://ip-du-serveur:3000</span>) ainsi que le mot de passe défini dans le fichier <span class="inline-code">.env</span>.</p>
-
   <div class="table-container">
     <table>
       <thead>
@@ -508,16 +487,13 @@ PORT=3000
     </table>
   </div>
 </section>
-
 <!-- Variables Dynamiques -->
 <section id="variables">
   <h2>🔤 Variables Dynamiques</h2>
   <p>Ces balises peuvent être directement tapées dans les champs du Panel. Elles seront automatiquement remplacées par la vraie donnée au moment de l'envoi du message sur Discord.</p>
-
   <div class="search-box">
     <input type="text" id="variableSearch" class="search-input" placeholder="Rechercher une variable ou une commande...">
   </div>
-
   <div class="table-container">
     <table id="variablesTable">
       <thead>
@@ -567,43 +543,34 @@ PORT=3000
     </table>
   </div>
 </section>
-
 <!-- Commandes Slash -->
 <section id="commands">
   <h2>⚡ Commandes Slash Disponibles</h2>
-
   <div class="grid-2">
     <div class="card">
       <h4>/kick <span class="badge badge-blue">Modération</span></h4>
       <p>Exclut le membre spécifié et lui envoie au préalable un message privé de notification personnalisable dans le panel.</p>
     </div>
-
     <div class="card">
       <h4>/espace <span class="badge badge-yellow">Owner Only</span></h4>
       <p>Déclenche la procédure d'éjection globale avec confirmation à clics multiples réservée au propriétaire du serveur.</p>
     </div>
-
     <div class="card">
       <h4>/say <span class="badge badge-blue">Admin</span></h4>
       <p>Envoie un message sous le nom et le pseudo du bot dans le salon de discussion sélectionné.</p>
     </div>
-
     <div class="card">
       <h4>/botinfo <span class="badge badge-green">Créateur</span></h4>
       <p>Affiche un rapport technique sur les performances, le ping et le temps de fonctionnement du bot.</p>
     </div>
   </div>
 </section>
-
 <!-- Base de données -->
 <section id="database">
   <h2>🗄️ Gestion de la Base de Données</h2>
   <p>Toutes les informations sont conservées localement dans <span class="inline-code">database.db</span> grâce à SQLite.</p>
-
   <div class="callout">
     <h5>🛡️ Récupération & Sauvegarde :</h5>
     <p>Pour effectuer une sauvegarde manuelle ou déplacer la configuration sur un autre serveur, connectez-vous en SFTP sur KarmaCloud et téléchargez simplement le fichier <span class="inline-code">database.db</span>.</p>
   </div>
 </section>
-
-```
